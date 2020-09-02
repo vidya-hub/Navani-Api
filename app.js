@@ -1,6 +1,12 @@
 const express=require("express");
 const mongoose=require("mongoose");
 
+
+//heroku commands
+// start locally -- heroku local web
+// to push code in git   git add .   git commit -m "commit name"  git heroku push
+// heroku open  for open url globally
+
 const routes=require("./routes/routes")
 const app=express();
 require("dotenv/config");
@@ -18,9 +24,9 @@ app.get("/",(req,res)=>{
 })
 
 
+const PORT = process.env.PORT || 5000
 
-
-app.listen(3000,(req,res)=>{
-    console.log("server at 3000");
+app.listen(PORT,(req,res)=>{
+    console.log(`Listening on ${ PORT }`);
 
 });
