@@ -57,6 +57,27 @@ router.get("/login/:username/pass/:password",async(req,res)=>{
         });
     }
 });
+//get user by id
+router.get("/getuserbyid/:id",async(req,res)=>{
+    console.log(req.params.id);
+    // console.log(req.params.username);
+    try {
+        const userlogin = await userdata.find({
+            _id:req.params.id,
+            // password:req.params.password
+        });
+        
+        res.json(userlogin);
+    } catch (error) {
+        res.send({
+            message:error,
+        });
+    }
+});
+
+
+
+
 
 //get all users     
 

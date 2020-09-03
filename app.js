@@ -4,7 +4,7 @@ const mongoose=require("mongoose");
 
 //heroku commands
 // start locally -- heroku local web
-// to push code in git   git add .   git commit -m "commit name"  git heroku push
+// to push code in git   git add .   git commit -m "commit name"  git  push heroku master
 // heroku open  for open url globally
 
 const routes=require("./routes/routes")
