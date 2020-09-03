@@ -119,6 +119,23 @@ router.patch("/forgot/:username",async (req,res)=>{
     }
 })
 
+//check the username exists???
+
+router.get("/check/:username",async(req,res)=>{
+    console.log(req.params.username);
+    try {
+        const user = await userdata.find({
+            username:req.params.username,
+        });
+        const isthere=Object.entries(user).length === 0;
+        res.send(isthere);
+    } catch (error) {
+        res.send({
+            message:error,
+        });
+    }
+});
+
 
 
 // http://localhost:3000/users/remove/vidya123
