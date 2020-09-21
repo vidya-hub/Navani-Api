@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h1>Navaani</h1>
+        <h1>Product Storage Page</h1>
+    <form method= "POST" action="/products/submit" >
+        <label>Product Name:<input type="text" name="name" required></label>
+        <br>
+        <label>Product Url:<input type="text" name="url" required></label>
+        <br>
+        <label for="type">Choose a Product category:</label>
+            <select name="type" id="type">
+                <option value="MenCloth">Men</option>
+                <option value="GirlCloth">Girl</option>
+                <option value="KidBoys">KidBoys</option>
+                <option value="KidGirl">KidGirl</option>
+            </select>
+        <br>    
+        <label>Product Price:<input type="text" name="price" required></label>
+        <br>
+        <label>Product Count:<input type="text" name="count" required></label>
+        <br>
+        <label>Product Description:<br><textarea name="Description"></textarea></label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
