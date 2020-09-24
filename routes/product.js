@@ -48,6 +48,7 @@ router_product.get("/allproducts",async(req,res)=>{
         });
     }
 });
+// router_product.get("/producturl")
 
 
 module.exports = router_product;

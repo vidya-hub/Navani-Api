@@ -11,7 +11,7 @@ var body_parser=require(
 
 const routes=require("./routes/routes");
 const router_product=require("./routes/product");
-
+const router_order=require("./routes/orders");
 
 
 const app=express();
@@ -22,6 +22,7 @@ app.use(express.json());
 app.use("/users",routes);
 app.use(express.static('./'));
 app.use("/products",router_product);
+app.use("/orders",router_order);
 mongoose.connect(process.env.DB_URL,{ useNewUrlParser: true , useUnifiedTopology: true },()=>{
     console.log("connected");
 })
